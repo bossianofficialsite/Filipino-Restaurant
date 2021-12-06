@@ -1,0 +1,344 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 100%;
+    --color-primary: #fff;
+    --color-secondary: #222;
+    --color-hover: rgba(255,255,255,0.5);
+    --color-modal: rgba(0,0,0,0.5);
+}
+html[data-theme="dark"] {
+    font-size: 100%;
+    --color-primary: #000;
+    --color-secondary: #fff;
+    --color-hover: rgba(0,0,0,0.2);
+    --color-modal: rgba(0,0,0,0.1);
+}
+body {
+    font-size: 16px;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2rem;
+    width: 100vw;
+}
+/* Header Section */
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 98;
+    background: var(--color-secondary);
+    box-shadow: rgba(0,0,0,0.7);
+}
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
+    border-radius: 17px;
+    width: 65px;
+    height: 35px;
+    cursor: pointer;
+    margin: 20px;
+    background: transparent;
+}
+input:not(:checked)[type="checkbox"] {
+    background: var(--color-primary);
+}
+input:checked[type="checkbox"] {
+    background: var(--color-primary);
+}
+input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    background: var(--color-secondary);
+    height: 23px;
+    width: 23px;
+    border-radius: 50%;
+    top: 18%;
+    left: 8%;
+    border: none;
+    transition: all 0.3s ease;
+}
+input:checked[type="checkbox"]::before {
+    background: var(--color-secondary);
+    left: 56%;
+}
+/* Search Icon */
+.search-bar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.search-bar i {
+    font-size: 1.3rem;
+    color: var(--color-primary);
+}
+.search-bar:hover {
+    background: var(--color-hover);
+}
+/* nav container */
+nav {
+    position: relative;
+    width: 50%;
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+    flex: 1;
+}
+nav ul {
+    display: flex;
+}
+nav ul li {
+    list-style: none;
+    margin: 10px;
+    cursor: pointer;
+}
+nav ul li a {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    color: var(--color-primary);
+}
+/* Logo */
+.logo {
+    position: absolute;
+    font-size: 2rem;
+    left: 10%;
+    font-family: 'Kaushan Script', cursive;
+    color: var(--color-primary);
+    display:flex;
+}
+.logo > div:nth-child(1) {
+    letter-spacing: 5px;
+    line-height: 9vh;
+    min-height: 9vh;
+}
+.logo-img {
+    cursor: pointer;
+}
+.logo-img img {
+    width: 70px;
+    object-fit: cover;
+}
+/* Gallery Container */
+.gallery-container {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+.btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 2;
+    color: rgba(255,255,255,0.5);
+}
+.btn:hover {
+    color: #fff;
+}
+.btn i {
+    pointer-events: none;
+}
+.btn-left {
+    left: 2%;
+}
+.btn-right {
+    right: 2%;
+}
+.list {
+    position: relative;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 100%;
+}
+.list > li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.list li span {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    font-size: 3rem;
+    color: #fff;
+    font-family: 'Kaushan Script', cursive;
+}
+.list > li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.blur-effect {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: var(--color-modal);
+    z-index: 2;
+    pointer-events: none;
+}
+.hidden {
+    display: none;
+}
+
+
+/* Modal Div */
+/* Logo modal */
+.logo-modal {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(5px);
+    z-index: 99;
+
+    pointer-events: none;
+    opacity: 0;
+}
+.logo-modal img {
+    width: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: all 0.1s ease-in-out;
+    pointer-events: none;
+}
+.logo-modal.open {
+    pointer-events: all;
+    opacity: 1;
+}
+.logo-modal.open img {
+    transform:  translate(-50%, -50%) scale(1);
+}
+/* Toggle */
+.toggle {
+    position: absolute;
+    width: 65px;
+    height: 55px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    pointer-events: none;
+    opacity: 0;
+}
+.toggle div {
+    width: 35px;
+    height: 7px;
+    background: #fff;
+    position: relative;
+    border-radius: 10px;
+    pointer-events: none;
+}
+.toggle div::before,
+.toggle div::after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    width: 50px;
+    height: 7px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.toggle div::before {
+    top: -14px;
+    left: 0;
+}
+.toggle div::after {
+    top: 14px;
+    right: 0;
+}
+.toggle.open div {
+    background: transparent;
+    width: 100%;
+}
+.toggle.open div::before,
+.toggle.open div::after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    width: 55px;
+    height: 7px;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.toggle.open div::before {
+    transform: translate(-50%, -50%) rotateZ(405deg);
+}
+.toggle.open div::after {
+    transform: translate(-50%, -50%) rotateZ(-405deg);
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .toggle {
+        pointer-events: all;
+        opacity: 1;
+        top: 14%;
+        right: 5%;
+    }
+    nav {
+        position: fixed;
+        width: 0;
+        min-height: 100vh;
+        background: rgba(0,0,0,0.7);   
+        top: 0;
+        left: 0;
+        z-index: 100;
+        transition: all 0.3s ease-in-out;
+        overflow: hidden;
+    }
+    nav.open {
+        width: 100%;
+    }
+    nav ul {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 50vh;
+        top: 30%;
+        transform: translateZ(-50%);
+    }
+    nav ul li {
+        width: 100%;
+        margin: 0;
+    }
+    nav ul li a {
+        width: 100%;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 30px;
+        color: #fff;
+    }
+}

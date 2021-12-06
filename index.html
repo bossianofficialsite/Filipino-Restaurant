@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filipino Restarant</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins&display=swap" rel="stylesheet">
+    <!-- Font Awesome-->
+    <script src="https://kit.fontawesome.com/60b0971689.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="toggle">
+        <div></div>
+    </div>
+    <header>
+        <nav class="nav">
+            <ul>
+                <li><a data-page="home">Home</a></li>
+                <li><a data-page="home">Menu</a></li>
+                <li><a data-page="home">Services</a></li>
+                <li><a data-page="home">About</a></li>
+            </ul>
+        </nav>
+
+          <!-- Logo -->
+          <div class="logo">
+            <div>Filipino Dish</div>
+            <div class="logo-img"><img src="image/logo.png"></div>
+          </div>
+
+          <!-- Search icon -->
+          <div class="search-bar"><i class="fas fa-search"></i></div>
+
+          <!-- Toggle light and dark -->
+          <input type="checkbox" name="theme">
+    </header>
+
+    <!-- Modal div-->
+    <div class="logo-modal"><img src="image/logo.png"></div>
+
+    <section class="gallery-container">
+        <div class="blur-effect"></div>
+        <button class="btn btn-left hidden"><i class="fas fa-chevron-left"></i></button>
+        <ul class="list">
+            <li class="current">
+                <span>Adobo</span>
+                <img src="image/img-slide-01.jpg">
+            </li>
+            <li>
+                <span>Sinigang</span>
+                <img src="image/img-slide-02.png">
+            </li>
+            <li>
+                <span>Letchon</span>
+                <img src="image/img-slide-03.jpg">
+            </li>
+            <li>
+                <span>Sisig</span>
+                <img src="image/img-slide-04.jpg">
+            </li>
+            <li>
+                <span>Kutsinta</span>
+                <img src="image/img-slide-05.jpg">
+            </li>
+        </ul>
+        <button class="btn btn-right"><i class="fas fa-chevron-right"></i></button>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
