@@ -15,17 +15,6 @@ toggle.addEventListener('click', function(){
     }
 })
 
-// Logo Click;
-logoImg.addEventListener('click', function(){
-    logoModal.classList.add('open');
-})
-logoModal.addEventListener('click', function(e) {
-    if(e.target.classList[0] === 'logo-modal') {
-        logoModal.classList.remove('open');
-    }
-})
-
-
 
 // Gallery Courosel
 const list = document.querySelector('.list');
@@ -79,6 +68,7 @@ function setActionImages(list, current, next) {
     next.classList.add('current');
 }
 
+
 // Toggle Sidebar for smaller screen
 const toggleSidebar = document.querySelector('.toggle');
 const nav = document.querySelector('nav');
@@ -92,5 +82,29 @@ document.addEventListener('click', function(e) {
     if(e.target.classList[0] !== 'toggle' && e.target.classList[0] !== 'nav') {
         toggleSidebar.classList.remove('open');
         nav.classList.remove('open');
+    }
+})
+
+// Modal Section
+// Logo Click;
+logoImg.addEventListener('click', function(){
+    logoModal.classList.add('open');
+})
+logoModal.addEventListener('click', function(e) {
+    if(e.target.classList[0] === 'logo-modal') {
+        logoModal.classList.remove('open');
+    }
+})
+
+//Search Open 
+const searchModal = document.querySelector('.search-modal');
+const searchBar = document.querySelector('.search-bar');
+
+searchBar.addEventListener('click', function() {
+    searchModal.classList.add('open');
+})
+searchModal.addEventListener('click', function(e) {
+    if(e.target.classList.contains('open')) {
+        searchModal.classList.remove('open');
     }
 })

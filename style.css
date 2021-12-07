@@ -299,6 +299,48 @@ nav ul li a {
 .toggle.open div::after {
     transform: translate(-50%, -50%) rotateZ(-405deg);
 }
+/* Search Modal */
+.search-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgb(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 99;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.search-modal.open {
+    height: 100%;
+    pointer-events: all;
+}
+input[placeholder="Search"] {
+    font-size: 1rem;
+    padding: 1em 1.4em;
+    width: 30%;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+}
+.search-modal i {
+    font-size: 2rem;
+    margin-left: 0.2em;
+    padding: 0.3em;
+    cursor: pointer;
+    border-radius: 50%;
+    color: #fff;
+}
+.search-modal i:hover {
+    background: rgba(0,0,0,0.2);
+}
 
 
 
