@@ -8,10 +8,8 @@ const logoModal = document.querySelector('.logo-modal')
 toggle.addEventListener('click', function(){
     if(toggle.checked) {
         htmlElement.setAttribute('data-theme', 'dark');
-        logoImg.src = 'image/logo2.png';
     } else {
         htmlElement.setAttribute('data-theme', 'light');
-        logoImg.src = 'image/logo.png';
     }
 })
 
@@ -83,6 +81,18 @@ document.addEventListener('click', function(e) {
         toggleSidebar.classList.remove('open');
         nav.classList.remove('open');
     }
+})
+
+// Shortcut Hover 
+const shortcuts = document.querySelectorAll('.shortcut-container div');
+
+shortcuts.forEach( entry => {
+    entry.addEventListener('mouseover', function() {
+        entry.classList.add('hover');
+    })
+    entry.addEventListener('mouseout', function() {
+        entry.classList.remove('hover');
+    })
 })
 
 // Modal Section
