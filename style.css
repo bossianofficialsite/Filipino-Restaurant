@@ -408,6 +408,14 @@ input[placeholder="Search"]:focus::placeholder {
         padding: 30px;
         color: #fff;
     }
+    input[placeholder="Search"] {
+        width: 80%;
+        font-size: 1rem;
+        padding: 0.8em 1.2rem;
+    }
+    .search-modal i {
+        font-size: 1.5rem;
+    }
 }
 
 @media only screen and (min-width: 600px) {
