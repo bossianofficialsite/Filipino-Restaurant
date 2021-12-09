@@ -95,6 +95,39 @@ shortcuts.forEach( entry => {
     })
 })
 
+// Nav Effect Observer
+const sections = document.querySelectorAll('section');
+const trans = document.querySelector('.trans');
+
+let observer = new IntersectionObserver(callback, {
+    threshold: 0.5
+})
+
+sections.forEach(section => {
+    observer.observe(section);
+})
+
+function callback(entries) {
+    entries.forEach(entry => {
+        const callName = entry.target.className;
+        const activeLink = document.querySelector(`[data-page="${callName}"]`);
+        const coordinates = activeLink.getBoundingClientRect();
+        const direction = {
+            height: coordinates.height,
+            width: coordinates.width,
+            top: coordinates.top,
+            left: coordinates.left
+        }
+
+        if(entry.isIntersecting) {
+            trans.style.setProperty('height', `${direction.height}px`);
+            trans.style.setProperty('width', `${direction.width}px`);
+            trans.style.setProperty('top', `${direction.top - 10}px`);
+            trans.style.setProperty('left', `${direction.left}px`);
+        }
+    })
+}
+
 // Modal Section
 // Logo Click;
 logoImg.addEventListener('click', function(){
