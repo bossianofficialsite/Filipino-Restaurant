@@ -1,0 +1,268 @@
+@media only screen and (max-width: 490px) {
+    .logo {
+        left: 2%;
+    }
+    .logo > div:nth-child(1) {
+        font-size: 1rem;
+    }
+    .logo-img img {
+        width: 60px;
+    }
+    input[placeholder="Search"] {
+        width: 80%;
+        font-size: 1rem;
+        padding: 0.8em 1.2rem;
+    }
+    .search-modal i {
+        font-size: 1.5rem;
+    }
+    .shortcut {
+        height: 25vh;
+    }
+    .shortcut-container {
+        width: 100%;
+    }
+    .shortcut-container > div {
+        border: none;
+        width: 30%;
+    }
+    div[class*="short-div"] > span {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .toggle {
+        pointer-events: all;
+        opacity: 1;
+        top: 14%;
+        right: 5%;
+    }
+    nav {
+        position: fixed;
+        width: 0;
+        min-height: 100vh;
+        background: rgba(0,0,0,0.7);   
+        top: 0;
+        left: 0;
+        z-index: 100;
+        transition: all 0.3s ease-in-out;
+        overflow: hidden;
+    }
+    nav.open {
+        width: 100%;
+    }
+    nav ul {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 50vh;
+        top: 30%;
+        transform: translateZ(-50%);
+    }
+    nav ul li {
+        width: 100%;
+        margin: 0;
+    }
+    nav ul li a {
+        width: 100%;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 30px;
+    }
+    input[placeholder="Search"] {
+        width: 80%;
+        font-size: 1rem;
+        padding: 0.8em 1.2rem;
+    }
+    .search-modal i {
+        font-size: 1.5rem;
+    }
+    .shortcut {
+        height: 25vh;
+    }
+    .shortcut-container {
+        width: 100%;
+    }
+    .shortcut-container > div {
+        border: none;
+        width: 30%;
+    }
+    div[class*="short-div"] > span {
+        font-size: 1rem;
+    }
+    .trans {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .toggle {
+        pointer-events: all;
+        opacity: 1;
+        top: 14%;
+        right: 5%;
+    }
+    nav {
+        position: fixed;
+        width: 0;
+        min-height: 100vh;
+        background: rgba(0,0,0,0.7);   
+        top: 0;
+        left: 0;
+        z-index: 100;
+        transition: all 0.3s ease-in-out;
+        overflow: hidden;
+    }
+    nav.open {
+        width: 100%;
+    }
+    nav ul {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 50vh;
+        top: 30%;
+        transform: translateZ(-50%);
+    }
+    nav ul li {
+        width: 100%;
+        margin: 0;
+    }
+    nav ul li a {
+        width: 100%;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 30px;
+    }
+    input[placeholder="Search"] {
+        width: 60%;
+        font-size: 1rem;
+        padding: 0.8em 1.2rem;
+    }
+    .search-modal i {
+        font-size: 1.7rem;
+    }
+    .shortcut {
+        height: 27vh;
+    }
+    .shortcut-container {
+        width: 90%;
+    }
+    .shortcut-container > div {
+        border: none;
+        width: 27%;
+        border: 1px solid var(--color-border);
+    }
+    div[class*="short-div"] > span {
+        font-size: 1rem;
+    }
+}
+ @media only screen and (min-width: 768px) {
+    .logo {
+        left: 2%;
+    }
+    .logo > div:nth-child(1) {
+        font-size: 1rem;
+    }
+    .logo-img img {
+        width: 60px;
+    }
+    .toggle {
+        pointer-events: none;
+        opacity: 0;
+    }
+    nav {
+        position: relative;
+        display: flex;
+        align-self: center;
+        justify-content: flex-end;
+        flex: 1;
+        z-index: auto;
+
+        min-height: auto;
+        background: transparent;   
+        top: none;
+        left: none;
+        overflow: none;
+    }
+    nav ul {
+        position: static;
+        display: flex;
+        width: auto;
+        height: auto;
+        top: auto;
+        transform: none;
+    }
+    nav ul li {
+        width: auto;
+        margin: 10px;
+    }
+    nav ul li a {
+        width: auto;
+        font-size: 1rem;
+        text-align: center;
+        padding: 0.5em 1em;  
+    }
+    input[placeholder="Search"] {
+        width: 40%;
+        font-size: 1rem;
+        padding: 1em 1.4rem;
+    }
+    .search-modal i {
+        font-size: 2rem;
+    }
+    .shortcut {
+        height: 25vh;
+    }
+    .shortcut-container {
+        width: 80%;
+    }
+    .shortcut-container > div {
+        border: none;
+        width: 27%;
+        border: 1px solid var(--color-border);
+    }
+    div[class*="short-div"] > span {
+        font-size: 1.2rem;
+    }
+    .trans {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+ }
+ @media only screen and (min-width: 900px) {
+    .logo {
+        left: 4%;
+    }
+    .logo > div:nth-child(1) {
+        font-size: 1.5rem;
+    }
+    .logo-img img {
+        width: 70px;
+    }
+}
+@media only screen and (min-width: 922px) {
+    .logo {
+        left: 10%;
+    }
+    .logo > div:nth-child(1) {
+        font-size: 2rem;
+    }
+    .logo-img img {
+        width: 70px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .shortcut {
+        height: 30vh;
+    }
+    .shortcut-container {
+        width: 70%;
+    }
+    div[class*="short-div"] > span {
+        font-size: 1.2rem;
+    }
+}

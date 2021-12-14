@@ -13,6 +13,7 @@
     <script src="https://kit.fontawesome.com/60b0971689.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
 
 </head>
 <body>
@@ -22,8 +23,8 @@
     <header>
         <nav class="nav">
             <ul>
-                <li><a data-page="gallery-container">Home</a></li>
-                <li><a data-page="menu">Menu</a></li>
+                <li><a href="#home" data-page="gallery-container">Home</a></li>
+                <li><a href="#menu" data-page="menu">Menu</a></li>
                 <li><a data-page="home">Services</a></li>
                 <li><a data-page="home">About</a></li>
                 <div class="trans"></div>
@@ -50,7 +51,7 @@
         <span><i class="fas fa-search"></i></span>
     </div>
     <!-- Slider -->
-    <section class="gallery-container">
+    <section id="home" class="gallery-container" data-index="0">
         <div class="blur-effect"></div>
         <button class="btn btn-left hidden"><i class="fas fa-chevron-left"></i></button>
         <ul class="list">
@@ -95,10 +96,14 @@
             </div>
         </div>
     </section>
-    <section class="menu"></section>
+    <section id="menu" class="menu" data-index="1"></section>
 
 
-
+    <!-- Smooth Scrolling -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]', { speed: 1000});
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

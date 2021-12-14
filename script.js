@@ -98,6 +98,7 @@ shortcuts.forEach( entry => {
 // Nav Effect Observer
 const sections = document.querySelectorAll('section');
 const trans = document.querySelector('.trans');
+const gradients = ['transparent']
 
 let observer = new IntersectionObserver(callback, {
     threshold: 0.5
@@ -111,6 +112,7 @@ function callback(entries) {
     entries.forEach(entry => {
         const callName = entry.target.className;
         const activeLink = document.querySelector(`[data-page="${callName}"]`);
+        const elementItem = entry.target.getAttribute('data-index');
         const coordinates = activeLink.getBoundingClientRect();
         const direction = {
             height: coordinates.height,
@@ -124,6 +126,11 @@ function callback(entries) {
             trans.style.setProperty('width', `${direction.width}px`);
             trans.style.setProperty('top', `${direction.top - 10}px`);
             trans.style.setProperty('left', `${direction.left}px`);
+            if(elementItem == 0) {
+                trans.style.backgroundColor = 'transparent';
+            } else {
+                trans.style.backgroundColor = 'var(--color-trans)';
+            }
         }
     })
 }
