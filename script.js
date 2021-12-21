@@ -98,6 +98,7 @@ shortcuts.forEach( entry => {
 // Nav Effect Observer
 const sections = document.querySelectorAll('section');
 const trans = document.querySelector('.trans');
+const header = document.querySelector('header');
 const gradients = ['transparent']
 
 let observer = new IntersectionObserver(callback, {
@@ -130,6 +131,13 @@ function callback(entries) {
                 trans.style.backgroundColor = 'transparent';
             } else {
                 trans.style.backgroundColor = 'var(--color-trans)';
+            }
+            console.log(activeLink.getAttribute('data-page'))
+
+            if(activeLink.getAttribute('data-page') !== 'gallery-container') {
+                header.classList.add('active');
+            } else {
+                header.classList.remove('active');
             }
         }
     })

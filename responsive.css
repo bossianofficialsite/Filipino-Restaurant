@@ -221,7 +221,7 @@
     }
     .shortcut-container > div {
         border: none;
-        width: 27%;
+        width: 25%;
         border: 1px solid var(--color-border);
     }
     div[class*="short-div"] > span {
@@ -257,7 +257,7 @@
 }
 @media only screen and (min-width: 1200px) {
     .shortcut {
-        height: 30vh;
+        height: 50vh;
     }
     .shortcut-container {
         width: 70%;
