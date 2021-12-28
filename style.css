@@ -16,6 +16,7 @@ html {
     --color-trans: red;
     --color-shortMenu: rgb(34, 45, 50);
     --color-menu-nav: rgb(60, 60, 60);
+    --food-num: rgb(252, 150, 66);
 }
 html[data-theme="dark"] {
     font-size: 100%;
@@ -29,6 +30,7 @@ html[data-theme="dark"] {
     --color-link: lawngreen;
     --color-shortMenu: #fff;
     --color-menu-nav: rgb(120, 120, 120);
+    --food-num: #222;
 }
 body {
     font-size: 16px;
@@ -354,16 +356,15 @@ div[class*="short-div"].hover > button {
 }
 .special {
     width: 70%;
-    height: 80vh;
     display: flex;
     flex-direction: column;   
     position: absolute;
-    top: 40%;
+    bottom: 5%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
 }
 .upper-special {
-    height: 15%;
+    height: 12vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -373,7 +374,7 @@ div[class*="short-div"].hover > button {
     color: rgb(252, 187, 66);
 }
 .lower-special {
-    height: 85%;
+    height: 65vh;
     display: flex;
     justify-content: space-evenly;
 }
@@ -396,9 +397,62 @@ div[class*="short-div"].hover > button {
     bottom: 0;
     color: #fff;
 }
-
-
-
+.menu-infos {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    margin-top: 1rem;
+}
+.menu-infos > div {
+    width: 50%;
+    height: 100%;
+}
+.menu-infos > div:nth-child(1),
+.menu-infos > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+}
+.menu-infos > div:nth-child(1) > div {
+    height: 33%;
+}
+.menu-infos > div:nth-child(1) > div,
+.menu-infos > div:nth-child(2) > div {
+    display: flex;
+    align-items: center;
+}
+.menu-infos > div:nth-child(2) > div:nth-child(1) {
+    height: 33%;
+}
+.menu-infos > div:nth-child(2) > div:nth-child(2) {
+    height: 67%;
+}
+.food-num {
+    width: 20%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--food-num);
+    font-weight: 700;
+}
+.food-title-info {
+    width: 80%;
+    height: 80%;
+}
+.food-title-info > p:nth-child(1) {
+    margin-top: 0.8rem;
+    font-size: 1.5rem;
+    color: var(--food-num);
+    padding: 0 10px;
+    font-family: 'Special Elite', cursive;
+    text-transform: uppercase;
+}
+.food-title-info > p:nth-child(2) {
+    font-size: 0.8rem;
+    color: #fff;
+    padding: 0 10px;
+}
 
 
 
