@@ -450,8 +450,17 @@ div[class*="short-div"].hover > button {
 }
 .food-title-info > p:nth-child(2) {
     font-size: 0.8rem;
-    color: #fff;
+    color: var(--color-secondary);
     padding: 0 10px;
+}
+.menu-infos > div > div:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu-infos > div > div:last-child > img {
+    width: 60%;
+    object-fit: cover;
 }
 
 

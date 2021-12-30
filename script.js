@@ -99,7 +99,7 @@ shortcuts.forEach( entry => {
 const sections = document.querySelectorAll('section');
 const trans = document.querySelector('.trans');
 const header = document.querySelector('header');
-const gradients = ['transparent']
+const gradients = ['transparent', ]
 
 let observer = new IntersectionObserver(callback, {
     threshold: 0.5
