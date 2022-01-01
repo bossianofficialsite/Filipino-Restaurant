@@ -166,3 +166,34 @@ searchModal.addEventListener('click', function(e) {
         searchModal.classList.remove('open');
     }
 })
+
+// ----------------------- Menu Section ----------------------- //
+const lowerNavigation = document.querySelectorAll('.menu-list a');
+const foodInfo = document.querySelectorAll('.food-info');
+lowerNavigation.forEach(entry => {
+    entry.addEventListener('click', function(e) {
+        for(let i of lowerNavigation) {
+            i.classList.remove('active');
+        }
+        entry.classList.add('active');
+
+        if(e.target.classList[0] === 'special-nav') {
+            displayFoodInfo('special')
+        } else if(e.target.classList[0] === 'adobo-nav') {
+            displayFoodInfo('adobo');
+        } else if(e.target.classList[0] === 'sinigang-nav') {
+            displayFoodInfo('sinigang');
+        }
+    })
+})
+
+function displayFoodInfo(target) {
+    for(let i of foodInfo) {
+        i.classList.remove('active');
+    }
+    foodInfo.forEach(entries => {
+        if(entries.classList.contains(target)) {
+            entries.classList.add('active');
+        }
+    })
+}

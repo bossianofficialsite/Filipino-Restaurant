@@ -17,6 +17,7 @@ html {
     --color-shortMenu: rgb(34, 45, 50);
     --color-menu-nav: rgb(60, 60, 60);
     --food-num: rgb(252, 150, 66);
+    --bg-gradient: transparent;
 }
 html[data-theme="dark"] {
     font-size: 100%;
@@ -31,6 +32,7 @@ html[data-theme="dark"] {
     --color-shortMenu: #fff;
     --color-menu-nav: rgb(120, 120, 120);
     --food-num: #222;
+    --bg-gradient: linear-gradient(to bottom, transparent, 80%, rgba(133, 255, 164, 0.5));
 }
 body {
     font-size: 16px;
@@ -242,6 +244,7 @@ nav ul li a {
     border-radius: 10px;
     background: transparent;
     position: relative;
+    background: var(--bg-gradient);
 }
 div[class*="short-div"] > span {
     color: var(--color-icon);
@@ -273,6 +276,10 @@ div[class*="short-div"] > button {
     opacity: 0;
     transition: all 0.3s ease;
     cursor: pointer;
+}
+div[class*="short-div"] > button:hover {
+    background: var(--color-secondary);
+    color: var(--color-primary);
 }
 div[class*="short-div"].hover > button {
     top: 70%;
@@ -354,7 +361,7 @@ div[class*="short-div"].hover > button {
 .menu-list li a.active {
     color: rgb(252, 187, 66);
 }
-.special {
+.food-info {
     width: 70%;
     display: flex;
     flex-direction: column;   
@@ -362,6 +369,13 @@ div[class*="short-div"].hover > button {
     bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
+
+    opacity: 0;
+    pointer-events: none;
+}
+.food-info.active {
+    opacity: 1;
+    pointer-events: all;
 }
 .upper-special {
     height: 12vh;
@@ -382,6 +396,9 @@ div[class*="short-div"].hover > button {
     width: 23%;
     overflow: hidden;
     position: relative;
+}
+.lower-special.two > div {
+    width: 30%
 }
 .lower-special > div > img {
     width: 100%;
@@ -415,6 +432,9 @@ div[class*="short-div"].hover > button {
 .menu-infos > div:nth-child(1) > div {
     height: 33%;
 }
+.menu-infos.two > div:nth-child(1) > div {
+    height: 45%;
+}
 .menu-infos > div:nth-child(1) > div,
 .menu-infos > div:nth-child(2) > div {
     display: flex;
@@ -425,6 +445,10 @@ div[class*="short-div"].hover > button {
 }
 .menu-infos > div:nth-child(2) > div:nth-child(2) {
     height: 67%;
+}
+.menu-infos > div:nth-child(2) > div:nth-child(2) > img {
+    width: 35%;
+    object-fit: cover;
 }
 .food-num {
     width: 20%;
