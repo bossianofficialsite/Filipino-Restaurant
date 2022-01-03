@@ -183,6 +183,8 @@ lowerNavigation.forEach(entry => {
             displayFoodInfo('adobo');
         } else if(e.target.classList[0] === 'sinigang-nav') {
             displayFoodInfo('sinigang');
+        } else if(e.target.classList[0] === 'fried-nav') {
+            displayFoodInfo('fried');
         }
     })
 })

@@ -373,9 +373,14 @@ div[class*="short-div"].hover > button {
     opacity: 0;
     pointer-events: none;
 }
+@keyframes moves {
+    0% {left: 45%; opacity: 0;}
+    100% {left: 50%; opacity: 1}
+}
 .food-info.active {
     opacity: 1;
     pointer-events: all;
+    animation: moves 1.5s ease;
 }
 .upper-special {
     height: 12vh;
