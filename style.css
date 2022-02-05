@@ -32,7 +32,7 @@ html[data-theme="dark"] {
     --color-shortMenu: #fff;
     --color-menu-nav: rgb(120, 120, 120);
     --food-num: #222;
-    --bg-gradient: linear-gradient(to bottom, transparent, 80%, rgba(133, 255, 164, 0.5));
+    --bg-gradient: linear-gradient(to bottom, transparent, 80%, rgba(0, 0, 0, 0.2));
 }
 body {
     font-size: 16px;
