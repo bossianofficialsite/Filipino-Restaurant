@@ -187,6 +187,8 @@ lowerNavigation.forEach(entry => {
             displayFoodInfo('fried');
         } else if(e.target.classList[0] === 'seafood-nav') {
             displayFoodInfo('seafood');
+        } else if(e.target.classList[0] === 'drink-nav') {
+            displayFoodInfo('drink');
         }
     })
 })

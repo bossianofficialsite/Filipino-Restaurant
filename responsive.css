@@ -222,7 +222,8 @@
     .shortcut-container > div {
         border: none;
         width: 25%;
-        border: 1px solid var(--color-border);
+        /* border: 1px solid var(--color-border); */
+        /* box-shadow: 0 4px 8px rgba(0,0,0,0.2); */
     }
     div[class*="short-div"] > span {
         font-size: 1.2rem;

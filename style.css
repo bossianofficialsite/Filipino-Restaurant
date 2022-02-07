@@ -32,7 +32,7 @@ html[data-theme="dark"] {
     --color-shortMenu: #fff;
     --color-menu-nav: rgb(120, 120, 120);
     --food-num: #222;
-    --bg-gradient: linear-gradient(to bottom, transparent, 80%, rgba(0, 0, 0, 0.2));
+    --bg-gradient: transparent;
 }
 body {
     font-size: 16px;
@@ -240,7 +240,7 @@ nav ul li a {
 .shortcut-container > div {
     width: 25%;
     height: 60%;
-    border: 1px solid var(--color-border);
+    /* border: 1px solid var(--color-border); */
     border-radius: 10px;
     background: transparent;
     position: relative;
