@@ -15,7 +15,7 @@ html {
     --color-icon: rgba(255,255,255,0.8);
     --color-trans: red;
     --color-shortMenu: rgb(34, 45, 50);
-    --color-menu-nav: rgb(60, 60, 60);
+    --color-menu-nav: rgb(34, 45, 50);
     --food-num: rgb(252, 150, 66);
     --bg-gradient: transparent;
 }
@@ -30,7 +30,7 @@ html[data-theme="dark"] {
     --color-trans: rgb(67, 67, 209);
     --color-link: lawngreen;
     --color-shortMenu: #fff;
-    --color-menu-nav: rgb(120, 120, 120);
+    --color-menu-nav: rgb(211, 211, 211);
     --food-num: #222;
     --bg-gradient: transparent;
 }
@@ -303,8 +303,9 @@ div[class*="short-div"].hover > button {
     position: relative;
     width: 70%;
     height: 13%;
-    background: transparent;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2), 0 2px 5px rgb(0, 0, 0, 0.2);
+    background: var(--color-menu-nav);
+    box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.2),
+    -3px -3px 7px rgba(255,255,255,0.05);
     margin: auto;
     border-radius: 10px;
 }
@@ -490,6 +491,13 @@ div[class*="short-div"].hover > button {
 .menu-infos > div > div:last-child > img {
     width: 60%;
     object-fit: cover;
+}
+
+/* Services */
+#services {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--color-primary);
 }
 
 
