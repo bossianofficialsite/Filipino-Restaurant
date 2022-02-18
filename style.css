@@ -334,6 +334,10 @@ div[class*="short-div"].hover > button {
     font-family: 'Special Elite', cursive;
     color: var(--color-secondary);
 }
+.breaker {
+    display: none;
+    margin: 1.5rem;
+}
 .menu-upper > div:nth-child(2) > p {
     color: #fff;
     padding: 0.5em;
@@ -341,6 +345,9 @@ div[class*="short-div"].hover > button {
     font-weight: 600;
     letter-spacing: 5px;
     font-family: 'Special Elite', cursive;
+}
+.menu-upper > div:nth-child(2) > p:first-child {
+    margin-top: 1rem;
 }
 .menu-lower {
     height: 30%;

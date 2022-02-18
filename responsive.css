@@ -95,8 +95,24 @@
         opacity: 0;
         pointer-events: none;
     }
-}
 
+    /* Menu Section */
+    .menu-nav {
+        width: 97%;
+    }
+    .dinner-menu {
+        font-size: 2.5rem;
+    }
+    .breaker {
+        display: block;
+    }
+    .menu-list li a {
+        font-size: 0.8rem;
+    }
+    .food-info {
+        width: 97%;
+    }
+}
 @media only screen and (min-width: 600px) {
     .toggle {
         pointer-events: all;
@@ -158,8 +174,25 @@
     div[class*="short-div"] > span {
         font-size: 1rem;
     }
+
+    /* Menu Section */
+    .menu-nav {
+        width: 85%;
+    }
+    .dinner-menu {
+        font-size: 2.5rem;
+    }
+    .breaker {
+        display: block;
+    }
+    .menu-list li a {
+        font-size: 0.8rem;
+    }
+    .food-info {
+        width: 97%;
+    }
 }
- @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     .logo {
         left: 2%;
     }
@@ -233,7 +266,23 @@
         pointer-events: all;
     }
 
- }
+    /* Menu Section */
+    .menu-nav {
+        width: 83%;
+    }
+    .dinner-menu {
+        font-size: 2.7rem;
+    }
+    .breaker {
+        display: none;
+    }
+    .menu-list li a {
+        font-size: 1rem;
+    }
+    .food-info {
+        width: 87%;
+    }
+}
  @media only screen and (min-width: 900px) {
     .logo {
         left: 4%;
@@ -255,6 +304,23 @@
     .logo-img img {
         width: 70px;
     }
+
+    /* Menu Section */
+    .menu-nav {
+        width: 75%;
+    }
+    .dinner-menu {
+        font-size: 3rem;
+    }
+    .breaker {
+        display: none;
+    }
+    .menu-list li a {
+        font-size: 1rem;
+    }
+    .food-info {
+        width: 80%;
+    }
 }
 @media only screen and (min-width: 1200px) {
     .shortcut {
@@ -265,5 +331,22 @@
     }
     div[class*="short-div"] > span {
         font-size: 1.2rem;
+    }
+
+    /* Menu Section */
+    .menu-nav {
+        width: 70%;
+    }
+    .dinner-menu {
+        font-size: 3rem;
+    }
+    .breaker {
+        display: none;
+    }
+    .menu-list li a {
+        font-size: 1rem;
+    }
+    .food-info {
+        width: 70%;
     }
 }
