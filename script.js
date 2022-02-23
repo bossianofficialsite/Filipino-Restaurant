@@ -8,8 +8,10 @@ const logoModal = document.querySelector('.logo-modal')
 toggle.addEventListener('click', function(){
     if(toggle.checked) {
         htmlElement.setAttribute('data-theme', 'dark');
+        htmlElement.classList.add('transition');
     } else {
         htmlElement.setAttribute('data-theme', 'light');
+        htmlElement.classList.add('transition');
     }
 })
 

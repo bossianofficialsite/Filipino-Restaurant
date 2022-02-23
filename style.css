@@ -15,9 +15,11 @@ html {
     --color-icon: rgba(255,255,255,0.8);
     --color-trans: red;
     --color-shortMenu: rgb(34, 45, 50);
+    --color-shortMenu2: rgb(255, 254, 250);
     --color-menu-nav: rgb(34, 45, 50);
     --food-num: rgb(252, 150, 66);
     --bg-gradient: transparent;
+    --color-hour: rgb(252, 187, 66);
 }
 html[data-theme="dark"] {
     font-size: 100%;
@@ -29,10 +31,12 @@ html[data-theme="dark"] {
     --color-icon: rgba(0,0,0,0.8);
     --color-trans: rgb(67, 67, 209);
     --color-link: lawngreen;
-    --color-shortMenu: #fff;
-    --color-menu-nav: rgb(211, 211, 211);
+    --color-shortMenu: rgb(255, 254, 250);
+    --color-shortMenu2: rgb(34, 45, 50);
+    --color-menu-nav: transparent;
     --food-num: #222;
     --bg-gradient: transparent;
+    --color-hour: rgb(78, 66, 252);
 }
 body {
     font-size: 16px;
@@ -341,7 +345,7 @@ div[class*="short-div"].hover > button {
 .menu-upper > div:nth-child(2) > p {
     color: #fff;
     padding: 0.5em;
-    color: rgb(252, 187, 66);
+    color: var(--color-hour);
     font-weight: 600;
     letter-spacing: 5px;
     font-family: 'Special Elite', cursive;
@@ -367,7 +371,7 @@ div[class*="short-div"].hover > button {
     cursor: pointer;
 }
 .menu-list li a.active {
-    color: rgb(252, 187, 66);
+    color: var(--color-hour);
 }
 .food-info {
     width: 70%;
@@ -398,7 +402,7 @@ div[class*="short-div"].hover > button {
 }
 .menu-active {
     font-size: 1.5rem;
-    color: rgb(252, 187, 66);
+    color: var(--color-hour);
 }
 .lower-special {
     height: 65vh;
@@ -504,10 +508,16 @@ div[class*="short-div"].hover > button {
 #services {
     width: 100%;
     min-height: 100vh;
-    background: var(--color-primary);
+    background: linear-gradient(to bottom right, var(--color-shortMenu) 50%, var(--color-shortMenu2) 50%);
+    position: relative;
 }
-
-
+.services-text {
+    font-size: 5rem;
+    transform: rotate(-25deg);
+    position: absolute;
+    top: 35%;
+    left: 10%;
+}
 
 
 
@@ -653,3 +663,11 @@ input[placeholder="Search"]:focus::placeholder {
     background: rgba(0,0,0,0.2);
 }
 
+
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transition *::after {
+    transition: all 0.3s ease !important;
+    transition-delay: 0 !important;
+}
