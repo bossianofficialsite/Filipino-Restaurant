@@ -3,15 +3,19 @@
 const toggle = document.querySelector('input[name="theme"]');
 const htmlElement = document.documentElement;
 const logoImg = document.querySelector('.logo-img img');
-const logoModal = document.querySelector('.logo-modal')
+const logoModal = document.querySelector('.logo-modal');
+const waiterLogo = document.querySelector('.waiter-logo');
 
 toggle.addEventListener('click', function(){
     if(toggle.checked) {
         htmlElement.setAttribute('data-theme', 'dark');
         htmlElement.classList.add('transition');
+        waiterLogo.src = 'image/waiter-logo.png';
+
     } else {
         htmlElement.setAttribute('data-theme', 'light');
         htmlElement.classList.add('transition');
+        waiterLogo.src = 'image/waiter-logo-light.png';
     }
 })
 
