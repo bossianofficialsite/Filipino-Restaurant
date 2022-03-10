@@ -10,12 +10,12 @@ toggle.addEventListener('click', function(){
     if(toggle.checked) {
         htmlElement.setAttribute('data-theme', 'dark');
         htmlElement.classList.add('transition');
-        waiterLogo.src = 'image/waiter-logo.png';
+        waiterLogo.src = 'image/waiter-logo-light.png';
 
     } else {
         htmlElement.setAttribute('data-theme', 'light');
         htmlElement.classList.add('transition');
-        waiterLogo.src = 'image/waiter-logo-light.png';
+        waiterLogo.src = 'image/waiter-logo.png';
     }
 })
 
