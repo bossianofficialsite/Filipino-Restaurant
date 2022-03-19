@@ -508,16 +508,30 @@ div[class*="short-div"].hover > button {
 #services {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(to bottom right, var(--color-shortMenu) 50%, var(--color-shortMenu2) 50%);
+    /* background: linear-gradient(to bottom right, var(--color-shortMenu) 50%, var(--color-shortMenu2) 50%); */
+    background: var(--color-primary);
     position: relative;
+}
+.service-exp {
+    width: 50%;
+    text-align: center;
+    line-height: 2.5rem;
+    position: absolute;
+    padding: 10px 20px;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-secondary);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2),
+    -3px -3px 7px rgba(255,255,255,0.05);
 }
 .services-text {
     font-size: 5rem;
-    transform: rotate(-26deg);
     position: absolute;
     top: 55%;
-    left: 30%;
-    color: var(--color-primary);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-secondary);
     font-family: 'Pacifico', cursive;
 }
 .waiter-logo {
@@ -525,15 +539,32 @@ div[class*="short-div"].hover > button {
     height: 40vh;
     object-fit: cover;
     position: absolute;
-    top: 50%;
-    right: 10%;
+    top: 45%;
+    right: 7%;
 }
 
 /* About */
 #about {
     width: 100%;
     min-height: 100vh;
-    background: var(--color-shortMenu2);
+    background: var(--color-primary);
+}
+
+/* Location */
+#location {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.location-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
 }
 
 
